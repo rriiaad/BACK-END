@@ -14,6 +14,7 @@
         <input type="text" name="Email" placeholder="Email" id="mail" required>
         <input type="password" name="password" placeholder="password 3 char len" pattern=".{3,}" required>
         <input type="file" name="file" accept=".PNG" required>
+        <input type="number" name="validator" id="validator" value="1" style="display: none">
         <input type="submit" name="submit" value="submit">
     </form>
     <br>
@@ -21,6 +22,10 @@
 
     <?php
             if (isset($_POST['submit'])){
+
+            if($_POST["validator"]==1){
+                echo "<h1>NOT A VALID E-MAIL</h1>";
+            }else{
 
             $img = $_FILES["file"];
             $imgName = $_FILES["file"]["name"];
@@ -48,6 +53,7 @@
             echo "    <h1>Votre réponse a bien était enregistrée</h1>";
             }
         }
+    }
         ?>
 
     <script src="./main.js"></script>
