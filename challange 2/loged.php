@@ -1,7 +1,13 @@
     <?php
-      session_start();
-    ?>
-
+      @session_start();
+      if (!isset($_SESSION["user"])){
+        ?>
+    <script>
+location.replace("./index.php");
+    </script>
+    <?php
+      }
+      ?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -15,6 +21,9 @@
     <body>
 
         <?php
+
+      if(isset($_SESSION["user"])){
+
       if(strcasecmp($_SESSION["user"],"user")==1){
         echo "<button>Create an article</button>";
 
@@ -28,6 +37,8 @@
               <button>Modify an article</button>
               <button>Delete an article</button>";
       }
+
+    }
         ?>
     </body>
 
