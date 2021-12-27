@@ -1,0 +1,4 @@
+riad@gmail.com-1234-user
+admine@gmail.com-1234-admin
+root@gmail.com-1234-superAdmine
+
