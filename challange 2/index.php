@@ -35,7 +35,7 @@
                 $valide_email=1;
                 if($_POST["password"]==$user_data[1]){
                   $_SESSION["user"]=$user_data[2];
-                  header("Location: http://localhost:3000/loged.php");
+                  header("Location: ./loged.php");
                   die();
                 }else{
                   echo"wrong password";
